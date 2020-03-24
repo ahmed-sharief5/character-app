@@ -1,0 +1,102 @@
+.home__container__characters--layout{
+    background-color: #000000;
+}
+.home__container__characters--img--title{
+    color: #ffffff;
+    margin: 10px;
+    position:relative;
+    display:inline-block;
+}
+.home__container__characters--img--title > img {
+    width: 258px;
+    height: 270px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.home__container__characters--img--title > span {
+    position:absolute;
+    top:72%;
+    left:0;
+    display:inline-block;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+    width: 258px;
+    padding: 10px 5px 0px 10px;
+}
+.home__container__characters--img--title > span > p {
+    font-size: 12px;
+    color: #adadad;
+}
+.home__container__characters__features--section{
+    background-color: #333333;
+    margin: 10px;
+    margin-top: -10px;
+    padding: 30px 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.home__container__characters__features--each-left{
+    color: #a7a7a7;
+    text-transform: uppercase;
+    word-spacing:9999px;
+}
+.home__container__characters__features--each-right{
+    float: right;
+    color: #c17c23;
+    text-transform: capitalize;
+}
+.home__container__characters__features--each {
+    border-bottom: 1px solid #3b3b3b;
+    padding: 10px;
+    font-size: 12px;
+}
+.home__container__characters--filter {
+    display: inline-block;
+}
+.home__container__characters__features--each:last-child {
+    border-bottom: none;
+}
+.home__container__characters--each {
+    padding: 0 !important;
+    margin: 0 !important;
+    /* display: inline-flex; */
+}
+.home__container__characters--actions {
+    padding: 35px;
+}
+#page-numbers {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    margin: 5px;
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #982f55;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+.disabled{
+    opacity: 0.65; 
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.active{
+    background-color: #982f55;
+    color: #fff;
+}
+.home__container__characters__status{
+    color: #ffffff;
+    text-align: center;
+}
+
+
+
+   
