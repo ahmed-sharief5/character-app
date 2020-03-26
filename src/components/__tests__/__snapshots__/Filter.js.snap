@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filter component should render component correctly 1`] = `
+<div
+  className="dropdown"
+>
+  <button
+    aria-expanded="false"
+    aria-haspopup="true"
+    className="btn btn-secondary dropdown-toggle"
+    data-toggle="dropdown"
+    id="dropdownMenuButton"
+    type="button"
+  >
+    one
+  </button>
+  <div
+    aria-labelledby="dropdownMenuButton"
+    className="dropdown-menu"
+  >
+    <a
+      className="dropdown-item"
+      href="#"
+      onClick={[Function]}
+    >
+      one
+    </a>
+    <a
+      className="dropdown-item"
+      href="#"
+      onClick={[Function]}
+    >
+      two
+    </a>
+    <a
+      className="dropdown-item"
+      href="#"
+      onClick={[Function]}
+    >
+      four
+    </a>
+  </div>
+</div>
+`;

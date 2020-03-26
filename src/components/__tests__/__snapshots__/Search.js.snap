@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component should render component correctly 1`] = `
+<div
+  style={
+    Object {
+      "display": "inline-flex",
+    }
+  }
+>
+  <input
+    aria-label="Search"
+    className="form-control mr-sm-2"
+    onChange={[Function]}
+    placeholder="Search By one"
+    type="search"
+  />
+  <button
+    className="btn btn-outline-success my-2 my-sm-0"
+    onClick={[Function]}
+    type="submit"
+  >
+    Search
+  </button>
+</div>
+`;
