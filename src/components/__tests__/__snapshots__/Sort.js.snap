@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sort component should render component correctly 1`] = `
+<button
+  className="btn btn-info"
+  onClick={[Function]}
+  type="button"
+>
+  Sort one by asc
+</button>
+`;
