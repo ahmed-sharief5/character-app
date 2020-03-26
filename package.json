@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "test": "react-scripts test --env=jsdom"
+    "test": "jest"
   },
   "devDependencies": {
     "css-loader": "^3.4.2",
@@ -38,7 +38,9 @@
     "babel-loader": "^8.0.0-beta.0",
     "babel-plugin-lodash": "^3.3.2",
     "babel-plugin-react-transform": "^3.0.0",
+    "babel-preset-es2015": "^6.24.1",
     "core-js": "^3.6.4",
+    "jest": "^25.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-loading-skeleton": "^2.0.1",
