@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Filter from "../Filter";
+import Filter from "../components/Filter";
 
 describe(`Filter component`, () => {
     it(`should render component correctly`, () => {

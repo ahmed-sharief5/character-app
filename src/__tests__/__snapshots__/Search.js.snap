@@ -12,12 +12,12 @@ exports[`Search component should render component correctly 1`] = `
     aria-label="Search"
     className="form-control mr-sm-2"
     onChange={[Function]}
-    placeholder="Search By one"
+    placeholder="Search By Name"
     type="search"
   />
   <button
     className="btn btn-outline-success my-2 my-sm-0"
-    onClick={[Function]}
+    onClick={[MockFunction]}
     type="submit"
   >
     Search

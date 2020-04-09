@@ -1,0 +1,173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component should render component correctly 1`] = `
+<div
+  className="containter"
+>
+  <div
+    className="home__container__characters--actions container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-lg-3 col-md-3 col-sm-6 col-xs-6 home__container__characters--each"
+      >
+        <button
+          className="btn btn-info"
+          onClick={[Function]}
+          type="button"
+        >
+          Sort Id by Desc
+        </button>
+      </div>
+      <div
+        className="col-lg-1 col-md-1 col-sm-1 col-xs-1 home__container__characters--each"
+      >
+        <h5>
+          Filter By
+        </h5>
+      </div>
+      <div
+        className="col-lg-5 col-md-5 col-sm-11 col-xs-11 home__container__characters--each"
+      >
+        <div
+          className="col-lg-4 col-md-4 col-sm-12 col-xs-12 home__container__characters--filter"
+        >
+          <div
+            className="dropdown"
+          >
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="btn btn-secondary dropdown-toggle"
+              data-toggle="dropdown"
+              id="dropdownMenuButton"
+              type="button"
+            >
+              Species
+            </button>
+            <div
+              aria-labelledby="dropdownMenuButton"
+              className="dropdown-menu"
+            >
+              <a
+                className="dropdown-item"
+                href="#"
+              >
+                No items
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          className="col-lg-4 col-md-4 col-sm-12 col-xs-12 home__container__characters--filter"
+        >
+          <div
+            className="dropdown"
+          >
+            <button
+              aria-expanded="false"
+              aria-haspopup="true"
+              className="btn btn-secondary dropdown-toggle"
+              data-toggle="dropdown"
+              id="dropdownMenuButton"
+              type="button"
+            >
+              Gender
+            </button>
+            <div
+              aria-labelledby="dropdownMenuButton"
+              className="dropdown-menu"
+            >
+              <a
+                className="dropdown-item"
+                href="#"
+              >
+                No items
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          className="col-lg-4 col-md-4 col-sm-12 col-xs-12 home__container__characters--filter"
+        >
+          <button
+            className="btn btn-danger"
+            onClick={[Function]}
+            type="button"
+          >
+            Clear
+          </button>
+        </div>
+      </div>
+      <div
+        className="col-lg-3 col-md-3 col-sm-6 col-xs-6 home__container__characters--each"
+      >
+        <div
+          style={
+            Object {
+              "display": "inline-flex",
+            }
+          }
+        >
+          <input
+            aria-label="Search"
+            className="form-control mr-sm-2"
+            onChange={[Function]}
+            placeholder="Search By Name"
+            type="search"
+            value=""
+          />
+          <button
+            className="btn btn-outline-success my-2 my-sm-0"
+            onClick={[Function]}
+            type="submit"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="container"
+  >
+    <ul
+      id="page-numbers"
+    >
+      <span
+        className="pagination disabled"
+        id={-5}
+        onClick={[Function]}
+      >
+        « Previous
+      </span>
+      <span
+        className="pagination "
+        id={5}
+        onClick={[Function]}
+      >
+        » Next
+      </span>
+    </ul>
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="home__container__characters--layout container"
+    >
+      <div
+        className="row"
+      >
+        <h2
+          className="home__container__characters__status"
+        >
+          Fetching Characters
+        </h2>
+      </div>
+    </div>
+  </div>
+</div>
+`;

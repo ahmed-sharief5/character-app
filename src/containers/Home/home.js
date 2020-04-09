@@ -50,10 +50,11 @@ const Home = () => {
         dispatchData(characters["results"],species,gender, totalPages)
     }
 
-    const searchCharacter = (e) => {
-        if(e.target.value == "")
+    const searchCharacter = (value) => {
+        if(value == ""){
             fetchCharacters(activePage)
-        setSearchedText(e.target.value)
+        }
+        setSearchedText(value)
     }
 
     const _handleSearchCharacter = () => {
@@ -140,7 +141,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-3 col-sm-6 col-xs-6 home__container__characters--each">
-                        <Search onSearch={e => searchCharacter(e)} onSubmit={_handleSearchCharacter} byWhat="Name"/>
+                        <Search onSearch={searchCharacter} onSubmit={_handleSearchCharacter} byWhat="Name" value={searchedText}/>
                     </div>
                 </div>
             </div> 
