@@ -7,7 +7,7 @@
     position:relative;
     display:inline-block;
 }
-.home__container__characters--img--title > img {
+.home__container__characters--img--img {
     width: 258px;
     height: 270px;
     border-top-right-radius: 5px;

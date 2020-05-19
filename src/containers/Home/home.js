@@ -5,7 +5,8 @@ import Sort from "../../components/Sort";
 import "./home.css";
 import { getCharacters } from "../../services/";
 import { useSelector, useDispatch } from "react-redux";
-import { setAllCharacters } from "../../store/actions/action";
+import { fetchingCharacters, setAllCharacters } from "../../store/actions/action";
+import Skeleton from "react-loading-skeleton";
 
 const Home = () => { 
     const pageNumbersPerClick = 5;  
@@ -30,6 +31,7 @@ const Home = () => {
     }
 
     async function fetchCharacters(page) {
+        dispatch(fetchingCharacters({characters, species, gender, totalPages}))
         let species = [], gender = [];
         let speciesCache = {}, genderCache = {};
     
@@ -154,12 +156,12 @@ const Home = () => {
             <div className="container">
                 <div className="home__container__characters--layout container">
                     <div className="row">
-                        {characters && characters.length > 0 ? 
+                        {fetchingDone && characters && characters.length > 0 ? 
                             characters.map((character, index) => {
                                 return (
                                     <div key={index} className="col-lg-3 col-md-3 col-sm-6 col-xs-6 home__container__characters--each">
                                         <div className="home__container__characters--img--title">
-                                            <img src={character.image} />
+                                            <img className="home__container__characters--img--img" src={character.image} />
                                             <span>
                                                 <h5>{character.name}</h5>
                                                 <p>Id: {character.id} - <span>created {formatDate(character.created)} years ago</span></p>
@@ -192,9 +194,8 @@ const Home = () => {
                             })
                         : 
                         !error ? 
-                            <h2 className="home__container__characters__status">{fetchingDone ? "No Characters Found" : 
-                                "Fetching Characters"
-                            }</h2> 
+                            fetchingDone && characters.length == 0 ? <h2 className="home__container__characters__status">No Characters Found</h2> : 
+                                <CharacterSkeleton/>
                             : <h2>{error}</h2>
                         }
                         
@@ -204,5 +205,70 @@ const Home = () => {
         </div>
     );
 };
+
+const CharacterSkeleton = () => {
+    return (
+            <div className="row">
+                {Array(8)
+                .fill()
+                .map((item, index) => (
+                    <div key={index} className="col-lg-3 col-md-3 col-sm-6 col-xs-6 home__container__characters--each">
+                        <div className="home__container__characters--img--title">
+                            {/* <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" /> */}
+                            <div className="home__container__characters--img--img">
+                                <Skeleton animation="wave" height={270} width={258}/>
+                            </div>
+                            <span>
+                                <h5><Skeleton animation="wave" height={24} width={235}/></h5>
+                                <p><Skeleton animation="wave" height={18} width={235}/></p>
+                            </span>
+                        </div>
+                        <div className="home__container__characters__features--section">
+                            <div className="home__container__characters__features--each">
+                                <Skeleton animation="wave" height={20} width={225}/>
+                            </div>
+                            <div className="home__container__characters__features--each">
+                                <Skeleton animation="wave" height={20} width={225}/>
+                            </div>
+                            <div className="home__container__characters__features--each">
+                                <Skeleton animation="wave" height={20} width={225}/>
+                            </div>
+                            <div className="home__container__characters__features--each">
+                                <Skeleton animation="wave" height={20} width={225}/>
+                            </div>
+                            <div className="home__container__characters__features--each">
+                                <Skeleton animation="wave" height={20} width={225}/>
+                            </div>
+                        </div>
+                    </div>
+                    // <div key={index} className="col-lg-3 col-md-3 col-sm-6 col-xs-6 home__container__characters--each">
+                    //     <div className="home__container__characters--img--title">
+                    //         <Skeleton height={200} widht={270}/>
+                    //         <h5><Skeleton height={10} width={100} /></h5>
+                    //         <p><Skeleton height={8} width={50} /></p>
+                    //     </div>
+                    //     <div className="home__container__characters__features--section">
+                    //         <div className="home__container__characters__features--each">
+                    //             <Skeleton height={20} width={100} />
+                    //         </div>
+                    //         <div className="home__container__characters__features--each">
+                    //             <Skeleton height={20} width={100} />
+                    //         </div>
+                    //         <div className="home__container__characters__features--each">
+                    //             <Skeleton height={20} width={100} />
+                    //         </div>
+                    //         <div className="home__container__characters__features--each">
+                    //             <Skeleton height={20} width={100} />
+                    //         </div>
+                    //         <div className="home__container__characters__features--each">
+                    //             <Skeleton height={20} width={100} />
+                    //         </div>
+                    //     </div>
+                    // </div>
+                ))}
+            </div>
+        
+    );
+}
 
 export default Home;
